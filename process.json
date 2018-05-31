@@ -1,0 +1,18 @@
+{
+    "apps": [
+      {
+        "name": "yoho-bi-dashboard",
+        "script": "./server.js",
+        "instances": "1",
+        "exec_mode": "cluster",
+        "merge_logs": true,
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "error_file": "/Data/logs/node/yoho-bi-manage-err.log",
+        "out_file": "/Data/logs/node/yoho-bi-manage-out.log",
+        "env": {
+            "TZ": "Asia/Shanghai",
+            "PORT": 8887
+        }
+      }
+    ]
+  }

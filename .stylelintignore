@@ -1,0 +1,12 @@
+// .stylelintignore
+*.js
+*.png
+*.eot
+*.ttf
+*.woff
+*.sh
+*.json
+*.sql
+*.md
+*.lock
+node_modules

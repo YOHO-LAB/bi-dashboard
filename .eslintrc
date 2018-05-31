@@ -1,0 +1,17 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "es6": true
+    },
+    "extends": "yoho",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "plugins": [
+        "html"
+    ],
+    "rules": {
+        "camelcase": "off",
+        "max-len": "off"
+    }
+}

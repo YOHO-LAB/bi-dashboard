@@ -1,0 +1,146 @@
+{
+  "name": "yoho-bi",
+  "version": "1.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon --watch ./server --watch ./config --watch server.js server.js",
+    "static": "yo-cli dev --config ./build/yo.dev.conf.js",
+    "build": "yo-cli build --config ./build/yo.prod.conf.js",
+    "lint-js": "lint-js",
+    "lint-css": "lint-css",
+    "precommit": "lint-commit",
+    "lint-all": "lint-all",
+    "lint-fix:js": "eslint . --ext .js --ext .vue --fix",
+    "lint-fix:css": "stylelint . --fix",
+    "db:create": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed:all": "sequelize db:seed:all",
+    "migration:generate": "sequelize migration:generate",
+    "seed:generate": "sequelize seed:generate"
+  },
+  "config": {
+    "lintJs": [
+      {
+        "title": "JS Front-end",
+        "path": [
+          "./app"
+        ]
+      },
+      {
+        "title": "JS Server",
+        "path": [
+          "./server"
+        ]
+      }
+    ],
+    "lintCss": [
+      {
+        "title": "CSS",
+        "path": [
+          "**/*.vue"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "codemirror": "^5.33.0",
+    "compression": "^1.7.1",
+    "connect-multiparty": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.1",
+    "crypto-js": "^3.1.9-1",
+    "dayjs": "^1.5.16",
+    "express": "^4.16.2",
+    "express-session": "^1.15.2",
+    "gt3-sdk": "^2.0.0",
+    "iview": "^2.14.0",
+    "ldapjs": "^1.0.2",
+    "lodash": "^4.17.4",
+    "mysql2": "^1.5.1",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "request-promise": "^4.2.0",
+    "sequelize": "^4.37.7",
+    "serve-favicon": "^2.4.2",
+    "uuid": "^3.2.1",
+    "vuex": "^3.0.1",
+    "winston": "^3.0.0-rc5",
+    "xlsx-style": "^0.8.13"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "axios": "^0.15.3",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.2.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-istanbul": "^3.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-plugin-transform-vue-jsx": "^3.4.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.22.0",
+    "babel-runtime": "^6.23.0",
+    "canvas2image": "^1.0.5",
+    "chalk": "^2.3.0",
+    "connect-history-api-fallback": "^1.3.0",
+    "css-loader": "^0.26.1",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-yoho": "^1.1.0",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^2.1.0",
+    "file-loader": "^0.10.0",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^2.28.0",
+    "html2canvas": "^1.0.0-alpha.9",
+    "husky": "^0.13.3",
+    "iview-loader": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.9",
+    "postcss-pxtorem": "^4.0.1",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
+    "sequelize-cli": "^4.0.0",
+    "shelljs": "^0.8.1",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.0.0",
+    "stylelint-config-yoho": "^1.4.0",
+    "stylelint-formatter-table": "^1.0.3",
+    "stylelint-scss": "^3.1.0",
+    "stylelint-webpack-plugin": "^0.9.0",
+    "url-loader": "^0.5.7",
+    "vue": "^2.5.13",
+    "vue-echarts": "^3.0.2",
+    "vue-loader": "^13.6.2",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.5.2",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-hot-middleware": "^2.18.0",
+    "webpack-merge": "^4.1.0",
+    "yo-cli": "^1.0.2",
+    "yoho-lint": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.5.1",
+    "yarn": ">=1.3.2"
+  },
+  "author": "陈峰 <feng.chen@yoho.cn>",
+  "license": "ISC",
+  "repository": "http://git.yoho.cn/fe/yoho-bi"
+}

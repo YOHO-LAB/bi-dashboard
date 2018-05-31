@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-yoho",
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "string-quotes": "double",
+    "no-empty-source": null
+  }
+}
